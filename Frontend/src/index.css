@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+/* Your custom styles or #root rules go below */
+body {
+  background-color: #030712;
+  color: #ffffff; /* Optional: makes default text white so it's readable */
+  margin: 0;
+}
+
+#root {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
