@@ -1,6 +1,6 @@
 
 const API_KEY = import.meta.env.VITE_OMDB_API_KEY;
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "https://moviesprime-rx6u.onrender.com";
 
 //1. the general api
 export async function getRecentMovie() {
@@ -105,6 +105,7 @@ export async function removeMovie(imdbID ,setCheckWatchlist) {
 }
 //below function is used to get the movies from the watchlist
 export async function getWatchlistMovies() {
+    console.log("hello")
     try {
         const result = await fetch(`${BASE_URL}/getWatchlistMovies`, {
             method: "GET",
@@ -118,7 +119,7 @@ export async function getWatchlistMovies() {
         throw new Error(`Server returned status: ${result.status}`);
     }
           const data = await result.json()
-        // console.log(data)
+        console.log(data)
         return data 
     } catch (err) {
         console.log("not able to get the movies from the watchlist",err)

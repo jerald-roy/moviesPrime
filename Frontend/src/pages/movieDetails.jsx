@@ -19,7 +19,7 @@ export default function MovieDetails() {
   // console.log(imdbID)
   //state to store the movies details
   const [details, setDetails] = useState(null)
-  const [checkWatchlist , setCheckWatchlist] = useState(null)
+  const [checkWatchlist , setCheckWatchlist] = useState(false)
     // const navigate = useNavigate()
   useEffect(() => {
     async function getData() {

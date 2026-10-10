@@ -4,8 +4,11 @@ import cors from 'cors'
 const app = express()
 
 app.use(cors({
-    origin: process.env.CORS_ORIGIN || 'http://localhost:5173',
-    credentials: true
+  origin: [
+    'http://localhost:5173', 
+    'https://movies-prime.vercel.app'
+  ],
+  credentials: true
 }));
 
 // 2. Parse incoming JSON payloads (this is what you need!)
